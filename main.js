@@ -12,7 +12,13 @@ specified range.
 places.
 */
 
-// Declaring functions for possible calculations
+// Arrays for testing
+let arr1 = [1, 5, 4, 30];
+let arr2 = [-9, -5, 1];
+let arr3 = [400, 200, -100, 0];
+
+
+// Declaring functions for user options
 
 function calcAbsValue(num) {
     return Math.abs(num);
@@ -23,7 +29,7 @@ function raiseToPower(base, power) {
 }
 
 function calcSqRoot(num) {
-    return Math.pow(num, 0.5);
+    return Math.pow(num, 0.5); // raising a number to 0.5 returns its square root 
 }
 
 function findMin(arr) {
@@ -46,32 +52,36 @@ function findMax(arr) {
     return max;
 }
 
-/* Test cases for min and max functions
-let arr1 = [1, 5, 4, 30];
-let arr2 = [-9, -5, 1];
-let arr3 = [400, 200, -100, 0];
-
-console.log(findMax(arr1));
-console.log(findMax(arr2));
-console.log(findMax(arr3));
-*/ 
-
-/* TODO: function for both largest and smallest numbers 
-function findBiggestAndSmallest(arr) {
-    let max = Number.NEGATIVE_INFINITY;
-    let min = Number.INFINITY;
-    for (num in arr) {
-        if (num > max) {
-            max = num;
-        }
-    };
-    for (num in)
+function findMaxAndMin(arr) {
+    console.log("Largest number: " + findMax(arr));
+    console.log("Smallest number: " + findMin(arr));
 }
-*/
 
-// TODO: function for random integer within a specified range 
+function findRandomInt(arr) {
+    let index = Math.floor(Math.random() * arr.length);
+    return arr[index];
+}
 
 // TODO: round a number to a specified number of decimals 
+// fix bug, function not working
+function roundToDecimals(numToRound, numDecimals) {
+    let factor = createDecimalFactor(numDecimals);
+    let product = numToRound * factor;
+    Math.round(product);
+    let result = product / factor;
+    return result;
+}
 
-// TODO: function that loops everything together 
+function createDecimalFactor(input) { // creates a number 1 concatenated with specified number of 0's 
+    let factor = "1"; // we also could raise 10 to the power of input 
+    for (i = 0; i < input; i++) {
+        factor += "0";
+    } 
+    return Number(factor); 
+}
+
+// test case 
+console.log(roundToDecimals(5.98384, 2));
+
+// TODO: function that runs the program
 
