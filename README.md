@@ -1,6 +1,7 @@
 Instructions
 Scenario: You are building a calculator for an online math game. The
 calculator must include functionality to perform the following:
+
 ● Absolute Value Calculation: Given any number, return its absolute
 value.
 ● Power Calculation: Calculate and return the value of a base raised to
@@ -12,6 +13,7 @@ determine the largest and smallest values.
 specified range.
 ● Custom Rounding: Round a number to a specified number of decimal
 places.
+
 Step-by-Step Tasks:
 1. Write a function for each operation listed above using the Math
 module.
@@ -25,5 +27,4 @@ where the user can select an operation and input the required values.
 ● Determine the largest and smallest values from [3, 78, -12,
 0.5, 27].
 ● Generate a random number between 1 and 50.
-1
 ● Round 23.67891 to 2 decimal places.
